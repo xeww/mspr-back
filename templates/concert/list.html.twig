@@ -1,0 +1,15 @@
+{% extends "base.html.twig" %}
+{% block body %}
+    {% for item in concerts %}
+        <div class="concert-container">
+            <div>
+                <p>Artiste: {{ item.artist.name }}</p>
+                <p>Scène: {{ item.scene.name }}</p>
+                <p>Date et heure: {{ item.dateAndTime|date('Y-m-d') }}</p>
+            </div>
+            <form method="post" action="{{ path("remove_concert", {id: item.id}) }}" onsubmit="return confirm('Voulez-vous vraiment supprimer ce concert?');">
+                <button type="submit">Supprimer</button>
+            </form>
+        </div>
+    {% endfor %}
+{% endblock %}

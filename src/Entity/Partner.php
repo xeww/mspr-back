@@ -2,15 +2,14 @@
 
 namespace App\Entity;
 
-use App\Repository\ArtistRepository;
-use Doctrine\DBAL\Types\Types;
+use App\Repository\PartnerRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
-#[ORM\Entity(repositoryClass: ArtistRepository::class)]
+#[ORM\Entity(repositoryClass: PartnerRepository::class)]
 #[Vich\Uploadable]
-class Artist
+class Partner
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
@@ -19,6 +18,9 @@ class Artist
 
     #[ORM\Column(length: 255)]
     private ?string $name = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $type = null;
 
     #[Vich\UploadableField(mapping: 'partners', fileNameProperty: 'imageName', size: 'imageSize')]
     private ?File $imageFile = null;
@@ -31,9 +33,6 @@ class Artist
 
     #[ORM\Column(nullable: true)]
     private ?\DateTimeImmutable $updatedAt = null;
-
-    #[ORM\Column(type: Types::TEXT)]
-    private ?string $description = null;
 
     public function getId(): ?int
     {
@@ -48,6 +47,18 @@ class Artist
     public function setName(string $name): static
     {
         $this->name = $name;
+
+        return $this;
+    }
+
+    public function getType(): ?string
+    {
+        return $this->type;
+    }
+
+    public function setType(string $type): static
+    {
+        $this->type = $type;
 
         return $this;
     }
@@ -86,17 +97,5 @@ class Artist
     public function getImageSize(): ?int
     {
         return $this->imageSize;
-    }
-
-    public function getDescription(): ?string
-    {
-        return $this->description;
-    }
-
-    public function setDescription(string $description): static
-    {
-        $this->description = $description;
-
-        return $this;
     }
 }

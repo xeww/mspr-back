@@ -7,9 +7,11 @@ use App\Form\SceneType;
 use App\Repository\SceneRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
+use Symfony\Component\Serializer\SerializerInterface;
 
 class SceneController extends AbstractController
 {
@@ -52,5 +54,26 @@ class SceneController extends AbstractController
         $entityManager->flush();
 
         return $this->redirectToRoute("list_scene");
+    }
+
+    #[Route("/api/scene/get/{id}", name: "get_scene", methods: "GET")]
+    public function get(int $id, SceneRepository $repository, SerializerInterface $serializer) : Response {
+        $entity = $repository->find($id);
+
+        if(!$entity) {
+            return new JsonResponse(["error" => "not found"], Response::HTTP_NOT_FOUND);
+        }
+
+        $serialized = $serializer->serialize($entity, "json");
+
+        return new Response($serialized, Response::HTTP_OK, ["Content-Type" => "application/json"]);
+    }
+
+    #[Route("/api/scene/getall", name: "getall_scene", methods: "GET")]
+    public function getAll(SceneRepository $repository, SerializerInterface $serializer): Response {
+        $all = $repository->findAll();
+        $serialized = $serializer->serialize($all, "json");
+
+        return new Response($serialized, Response::HTTP_OK, ["Content-Type" => "application/json"]);
     }
 }

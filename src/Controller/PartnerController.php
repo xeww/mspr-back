@@ -7,9 +7,11 @@ use App\Form\PartnerType;
 use App\Repository\PartnerRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
+use Symfony\Component\Serializer\SerializerInterface;
 
 class PartnerController extends AbstractController
 {
@@ -52,5 +54,26 @@ class PartnerController extends AbstractController
         $entityManager->flush();
 
         return $this->redirectToRoute("list_partner");
+    }
+
+    #[Route("/api/partner/get/{id}", name: "get_partner", methods: "GET")]
+    public function get(int $id, PartnerRepository $repository, SerializerInterface $serializer) : Response {
+        $entity = $repository->find($id);
+
+        if(!$entity) {
+            return new JsonResponse(["error" => "not found"], Response::HTTP_NOT_FOUND);
+        }
+
+        $serialized = $serializer->serialize($entity, "json");
+
+        return new Response($serialized, Response::HTTP_OK, ["Content-Type" => "application/json"]);
+    }
+
+    #[Route("/api/partner/getall", name: "getall_partner", methods: "GET")]
+    public function getAll(PartnerRepository $repository, SerializerInterface $serializer): Response {
+        $all = $repository->findAll();
+        $serialized = $serializer->serialize($all, "json");
+
+        return new Response($serialized, Response::HTTP_OK, ["Content-Type" => "application/json"]);
     }
 }

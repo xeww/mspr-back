@@ -88,6 +88,10 @@ class Artist
         return $this->imageSize;
     }
 
+    public function getUpdatedAt(): ?\DateTimeImmutable {
+        return $this->updatedAt;
+    }
+
     public function getDescription(): ?string
     {
         return $this->description;

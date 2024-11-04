@@ -57,10 +57,11 @@ class ConcertController extends AbstractController
     }
 
     #[Route("/api/concert/get/{id}", name: "get_concert", methods: "GET")]
-    public function get(int $id, ConcertRepository $repository, SerializerInterface $serializer) : Response {
+    public function get(int $id, ConcertRepository $repository, SerializerInterface $serializer): Response
+    {
         $entity = $repository->find($id);
 
-        if(!$entity) {
+        if (!$entity) {
             return new JsonResponse(["error" => "not found"], Response::HTTP_NOT_FOUND);
         }
 
@@ -70,7 +71,8 @@ class ConcertController extends AbstractController
     }
 
     #[Route("/api/concert/getall", name: "getall_concert", methods: "GET")]
-    public function getAll(ConcertRepository $repository, SerializerInterface $serializer): Response {
+    public function getAll(ConcertRepository $repository, SerializerInterface $serializer): Response
+    {
         $all = $repository->findAll();
         $serialized = $serializer->serialize($all, "json");
 

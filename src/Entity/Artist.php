@@ -88,7 +88,8 @@ class Artist
         return $this->imageSize;
     }
 
-    public function getUpdatedAt(): ?\DateTimeImmutable {
+    public function getUpdatedAt(): ?\DateTimeImmutable
+    {
         return $this->updatedAt;
     }
 

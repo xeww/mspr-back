@@ -57,10 +57,11 @@ class SceneController extends AbstractController
     }
 
     #[Route("/api/scene/get/{id}", name: "get_scene", methods: "GET")]
-    public function get(int $id, SceneRepository $repository, SerializerInterface $serializer) : Response {
+    public function get(int $id, SceneRepository $repository, SerializerInterface $serializer): Response
+    {
         $entity = $repository->find($id);
 
-        if(!$entity) {
+        if (!$entity) {
             return new JsonResponse(["error" => "not found"], Response::HTTP_NOT_FOUND);
         }
 
@@ -70,7 +71,8 @@ class SceneController extends AbstractController
     }
 
     #[Route("/api/scene/getall", name: "getall_scene", methods: "GET")]
-    public function getAll(SceneRepository $repository, SerializerInterface $serializer): Response {
+    public function getAll(SceneRepository $repository, SerializerInterface $serializer): Response
+    {
         $all = $repository->findAll();
         $serialized = $serializer->serialize($all, "json");
 

@@ -57,10 +57,11 @@ class PartnerController extends AbstractController
     }
 
     #[Route("/api/partner/get/{id}", name: "get_partner", methods: "GET")]
-    public function get(int $id, PartnerRepository $repository, SerializerInterface $serializer) : Response {
+    public function get(int $id, PartnerRepository $repository, SerializerInterface $serializer): Response
+    {
         $entity = $repository->find($id);
 
-        if(!$entity) {
+        if (!$entity) {
             return new JsonResponse(["error" => "not found"], Response::HTTP_NOT_FOUND);
         }
 
@@ -70,7 +71,8 @@ class PartnerController extends AbstractController
     }
 
     #[Route("/api/partner/getall", name: "getall_partner", methods: "GET")]
-    public function getAll(PartnerRepository $repository, SerializerInterface $serializer): Response {
+    public function getAll(PartnerRepository $repository, SerializerInterface $serializer): Response
+    {
         $all = $repository->findAll();
         $serialized = $serializer->serialize($all, "json");
 

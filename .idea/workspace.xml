@@ -6,11 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="94a4d03f-f5d4-4f21-b89f-91641b40d9fa" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ArtistController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ConcertController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/PartnerController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/SceneController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/API/PartnerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/API/PartnerController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,6 +115,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.keymap",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -139,11 +136,15 @@
       <option name="presentableId" value="Default" />
       <updated>1730794815705</updated>
       <workItem from="1730794816702" duration="7990000" />
-      <workItem from="1730879085280" duration="1639000" />
+      <workItem from="1730879085280" duration="6403000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

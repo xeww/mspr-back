@@ -12,11 +12,12 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 use Symfony\Component\Serializer\SerializerInterface;
+use Vich\UploaderBundle\Templating\Helper\UploaderHelper;
 
 class PartnerController extends AbstractController
 {
     #[Route("/partner/new", name: "new_partner")]
-    public function new(Request $request, EntityManagerInterface $entityManager): Response
+    public function new(Request $request, EntityManagerInterface $entityManager, UploaderHelper $helper): Response
     {
         $partner = new Partner();
 
@@ -26,8 +27,15 @@ class PartnerController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $partner = $form->getData();
 
-            $entityManager->persist($partner);
-            $entityManager->flush();
+            if ($partner instanceof Partner) {
+                $entityManager->persist($partner);
+                $entityManager->flush();
+
+                $path = $helper->asset($partner, "imageFile");
+                $partner->setImageUrl($path);
+
+                $entityManager->flush();
+            }
 
             return $this->redirectToRoute("new_partner");
         }

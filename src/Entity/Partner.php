@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use App\Repository\PartnerRepository;
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
@@ -33,6 +34,9 @@ class Partner
 
     #[ORM\Column(nullable: true)]
     private ?\DateTimeImmutable $updatedAt = null;
+
+    #[ORM\Column(type: Types::TEXT, nullable: true)]
+    private ?string $imageUrl = null;
 
     public function getId(): ?int
     {
@@ -97,5 +101,15 @@ class Partner
     public function getImageSize(): ?int
     {
         return $this->imageSize;
+    }
+
+    public function getImageUrl(): ?string
+    {
+        return $this->imageUrl;
+    }
+
+    public function setImageUrl(?string $imageUrl): void
+    {
+        $this->imageUrl = $imageUrl;
     }
 }

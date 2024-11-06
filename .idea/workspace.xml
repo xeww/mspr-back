@@ -5,14 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94a4d03f-f5d4-4f21-b89f-91641b40d9fa" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/Symfony_9_23_24__6_18PM.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/mspr-back.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/mspr-back.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.php-cs-fixer.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.php-cs-fixer.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/PartnerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PartnerController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Partner.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Partner.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ArtistController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ConcertController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/PartnerController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/SceneController.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,10 +98,13 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-migrations-bundle" />
     </include_path>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2oQHKZWqrgt2GyAWBOgM6O0Z1aY" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -112,7 +113,7 @@
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "v2",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -138,6 +139,7 @@
       <option name="presentableId" value="Default" />
       <updated>1730794815705</updated>
       <workItem from="1730794816702" duration="7990000" />
+      <workItem from="1730879085280" duration="1639000" />
     </task>
     <servers />
   </component>

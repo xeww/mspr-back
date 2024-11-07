@@ -24,6 +24,8 @@ class ArtistType extends AbstractType
             ])
             ->add("imageFile", VichImageType::class, [
                 "label" => "Image/Cover de l'artiste",
+                "allow_delete" => false,
+                "download_label" => "Télécharger l'image",
             ])
             ->add("submit", SubmitType::class, [
                 "label" => "Enregistrer",

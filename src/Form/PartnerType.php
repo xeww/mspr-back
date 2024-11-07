@@ -31,6 +31,8 @@ class PartnerType extends AbstractType
             ])
             ->add("imageFile", VichImageType::class, [
                 "label" => "Image du logo",
+                "allow_delete" => false,
+                "download_label" => "Télécharger l'image",
             ])
             ->add("submit", SubmitType::class, [
                 "label" => "Enregistrer",

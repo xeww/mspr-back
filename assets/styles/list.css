@@ -1,0 +1,38 @@
+.entity-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.entity-container::after {
+    content: "";
+    height: 1px;
+    width: 100%;
+    background-color: lightgray;
+    position: absolute;
+    bottom: 0;
+}
+
+.list-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.entity-delete-button {
+    background-color: indianred;
+}
+
+.entity-edit-button  {
+    background-color: limegreen;
+}
+
+img {
+    width: 300px;
+}
+
+#create-button {
+    margin-top: 15px;
+}

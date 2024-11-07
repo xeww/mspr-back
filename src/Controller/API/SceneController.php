@@ -2,30 +2,30 @@
 
 namespace App\Controller\API;
 
-use App\Entity\Partner;
-use App\Repository\PartnerRepository;
+use App\Entity\Scene;
+use App\Repository\SceneRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 
-#[Route("/api/partner", name: "partner_api_")]
-class PartnerController extends AbstractController
+#[Route("/api/scene", name: "scene_api_")]
+class SceneController extends AbstractController
 {
     #[Route("/", name: "index", methods: ["GET"])]
-    public function index(PartnerRepository $repository): Response
+    public function index(SceneRepository $repository): Response
     {
         return $this->json($repository->findAll(), Response::HTTP_OK);
     }
 
     #[Route("/{id}", name: "get", methods: ["GET"])]
-    public function get(Partner $entity): Response
+    public function get(Scene $entity): Response
     {
         return $this->json($entity, Response::HTTP_OK);
     }
 
     #[Route("/{id}", name: "delete", methods: ["DELETE"])]
-    public function delete(Partner $entity, EntityManagerInterface $entityManager): Response
+    public function delete(Scene $entity, EntityManagerInterface $entityManager): Response
     {
         $entityManager->remove($entity);
         $entityManager->flush();

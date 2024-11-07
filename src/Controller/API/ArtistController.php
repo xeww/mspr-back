@@ -2,30 +2,30 @@
 
 namespace App\Controller\API;
 
-use App\Entity\Partner;
-use App\Repository\PartnerRepository;
+use App\Entity\Artist;
+use App\Repository\ArtistRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 
-#[Route("/api/partner", name: "partner_api_")]
-class PartnerController extends AbstractController
+#[Route("/api/artist", name: "artist_api_")]
+class ArtistController extends AbstractController
 {
     #[Route("/", name: "index", methods: ["GET"])]
-    public function index(PartnerRepository $repository): Response
+    public function index(ArtistRepository $repository): Response
     {
         return $this->json($repository->findAll(), Response::HTTP_OK);
     }
 
     #[Route("/{id}", name: "get", methods: ["GET"])]
-    public function get(Partner $entity): Response
+    public function get(Artist $entity): Response
     {
         return $this->json($entity, Response::HTTP_OK);
     }
 
     #[Route("/{id}", name: "delete", methods: ["DELETE"])]
-    public function delete(Partner $entity, EntityManagerInterface $entityManager): Response
+    public function delete(Artist $entity, EntityManagerInterface $entityManager): Response
     {
         $entityManager->remove($entity);
         $entityManager->flush();

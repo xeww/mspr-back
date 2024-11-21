@@ -6,25 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="94a4d03f-f5d4-4f21-b89f-91641b40d9fa" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/vich_uploader.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/vich_uploader.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/partners/angele-672cd35d3e3d6703097446.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/angele-672cd35d3e3d6703097446.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/partners/drake-6725d79515d23146549031.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/drake-6725d79515d23146549031.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/partners/huffpost-6725bce111e5e420018829.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/huffpost-6725bce111e5e420018829.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/partners/huffpost-6729dd054fd7b917688859.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/huffpost-6729dd054fd7b917688859.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/partners/logo-ridf-2019-compact-blanc-6725bb90537ca771644775.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/logo-ridf-2019-compact-blanc-6725bb90537ca771644775.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/partners/logo-ridf-2019-compact-blanc-6729dd1268869538812183.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/logo-ridf-2019-compact-blanc-6729dd1268869538812183.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/partners/spotify-2-6725b9f2cda27771500768.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/spotify-2-6725b9f2cda27771500768.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/partners/spotify-2-6725bb62d656d105469983.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/spotify-2-6725bb62d656d105469983.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/partners/spotify-2-6729d9158f439275474287.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/spotify-2-6729d9158f439275474287.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/partners/spotify-2-6729dab9ae491990500665.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/spotify-2-6729dab9ae491990500665.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/partners/spotify-2-6729dc4396650436597292.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/spotify-2-6729dc4396650436597292.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/partners/spotify-2-6729dc6c0e11e526479453.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/spotify-2-6729dc6c0e11e526479453.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/partners/spotify-2-6729dc87af2ff171119001.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/spotify-2-6729dc87af2ff171119001.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/partners/spotify-2-672ca541d84b0008098356.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/partners/ticketmaster-5-6725bb9c67403469917274.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/ticketmaster-5-6725bb9c67403469917274.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/partners/ticketmaster-5-6729dce8b83e1687152485.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/ticketmaster-5-6729dce8b83e1687152485.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/partners/ville-de-paris-logo-2019-6725bba8bdc7f127549651.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/ville-de-paris-logo-2019-6725bba8bdc7f127549651.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/partners/ville-de-paris-logo-2019-672ce67939c3c687407441.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/ville-de-paris-logo-2019-672ce67939c3c687407441.svg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,21 +105,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "v2",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;v2&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/config/packages" />
@@ -168,6 +149,11 @@
       <workItem from="1731423784953" duration="5462000" />
       <workItem from="1731577357669" duration="3280000" />
       <workItem from="1731614951400" duration="4372000" />
+      <workItem from="1731678669336" duration="666000" />
+      <workItem from="1731805748634" duration="638000" />
+      <workItem from="1731948631398" duration="1207000" />
+      <workItem from="1732069921862" duration="618000" />
+      <workItem from="1732153868231" duration="2880000" />
     </task>
     <servers />
   </component>

@@ -53,7 +53,8 @@ class ConcertController extends AbstractController
     }
 
     #[Route("/delete/{id}", name: "delete", methods: ["GET"])]
-    public function delete(Concert $entity, EntityManagerInterface $entityManager) : Response {
+    public function delete(Concert $entity, EntityManagerInterface $entityManager): Response
+    {
         $entityManager->remove($entity);
         $entityManager->flush();
 

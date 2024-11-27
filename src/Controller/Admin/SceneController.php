@@ -53,7 +53,8 @@ class SceneController extends AbstractController
     }
 
     #[Route("/delete/{id}", name: "delete", methods: ["GET"])]
-    public function delete(Scene $entity, EntityManagerInterface $entityManager) : Response {
+    public function delete(Scene $entity, EntityManagerInterface $entityManager): Response
+    {
         $entityManager->remove($entity);
         $entityManager->flush();
 

@@ -53,7 +53,8 @@ class WCController extends AbstractController
     }
 
     #[Route("/delete/{id}", name: "delete", methods: ["GET"])]
-    public function delete(WC $entity, EntityManagerInterface $entityManager) : Response {
+    public function delete(WC $entity, EntityManagerInterface $entityManager): Response
+    {
         $entityManager->remove($entity);
         $entityManager->flush();
 

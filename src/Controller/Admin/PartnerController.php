@@ -53,7 +53,8 @@ class PartnerController extends AbstractController
     }
 
     #[Route("/delete/{id}", name: "delete", methods: ["GET"])]
-    public function delete(Partner $entity, EntityManagerInterface $entityManager) : Response {
+    public function delete(Partner $entity, EntityManagerInterface $entityManager): Response
+    {
         $entityManager->remove($entity);
         $entityManager->flush();
 

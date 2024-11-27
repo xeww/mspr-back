@@ -1,0 +1,4 @@
+.homepage-container nav {
+    display: flex;
+    flex-direction: column;
+}

@@ -1,5 +1,6 @@
 import "./styles/app.css";
 import "./styles/list.css";
+import "./styles/home.css";
 
 document.addEventListener("DOMContentLoaded", () => {
     const listContainer = document.getElementById("list-container");

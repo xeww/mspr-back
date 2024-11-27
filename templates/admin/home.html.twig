@@ -1,7 +1,7 @@
 {% extends "base.html.twig" %}
 {% block body %}
     <div class="homepage-container center">
-        <h1>Bienvenue!</h1>
+        <h1>Bienvenue, {{ app.user.firstName }}!</h1>
         <nav>
             <a href="/admin/artist"><span>*/</span> Artistes</a>
             <a href="/admin/concert"><span>*/</span> Concerts</a>

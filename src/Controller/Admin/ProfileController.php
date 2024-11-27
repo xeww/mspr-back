@@ -28,7 +28,9 @@ class ProfileController extends AbstractController
             $user = $form->getData();
             $newPassword = $form->get("newPassword")->getData();
 
-            $user->setPassword($hasher->hashPassword($user, $newPassword));
+            if($newPassword !== null) {
+                $user->setPassword($hasher->hashPassword($user, $newPassword));
+            }
 
             $entityManager->persist($user);
             $entityManager->flush();

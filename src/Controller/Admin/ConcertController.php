@@ -51,4 +51,12 @@ class ConcertController extends AbstractController
     {
         return $this->edit(new Concert(), $request, $entityManager);
     }
+
+    #[Route("/delete/{id}", name: "delete", methods: ["GET"])]
+    public function delete(Concert $entity, EntityManagerInterface $entityManager) : Response {
+        $entityManager->remove($entity);
+        $entityManager->flush();
+
+        return $this->redirectToRoute("concert_admin_index");
+    }
 }

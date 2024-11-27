@@ -51,4 +51,12 @@ class WCController extends AbstractController
     {
         return $this->edit(new WC(), $request, $entityManager);
     }
+
+    #[Route("/delete/{id}", name: "delete", methods: ["GET"])]
+    public function delete(WC $entity, EntityManagerInterface $entityManager) : Response {
+        $entityManager->remove($entity);
+        $entityManager->flush();
+
+        return $this->redirectToRoute("wc_admin_index");
+    }
 }

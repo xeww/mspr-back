@@ -27,17 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     const entityId = button.parentElement.getAttribute("data-id");
                     if(entityId) {
                         if(confirm("Confirmation de la suppression")) {
-                            fetch(`${apiUrl}${entityId}`, {
-                                method: "DELETE",
-                                headers: {
-                                    "Content-Type": "application/json",
-                                    "X-Requested-With": "XMLHttpRequest"
-                                }
-                            }).then(response => {
-                                if(response.ok) {
-                                    location.reload();
-                                }
-                            })
+                            window.location.href = `${adminUrl}delete/${entityId}`;
                         }
                     }
                 });

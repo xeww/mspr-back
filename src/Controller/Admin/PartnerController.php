@@ -51,4 +51,12 @@ class PartnerController extends AbstractController
     {
         return $this->edit(new Partner(), $request, $entityManager);
     }
+
+    #[Route("/delete/{id}", name: "delete", methods: ["GET"])]
+    public function delete(Partner $entity, EntityManagerInterface $entityManager) : Response {
+        $entityManager->remove($entity);
+        $entityManager->flush();
+
+        return $this->redirectToRoute("partner_admin_index");
+    }
 }

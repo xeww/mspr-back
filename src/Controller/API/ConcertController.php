@@ -23,13 +23,4 @@ class ConcertController extends AbstractController
     {
         return $this->json($entity, Response::HTTP_OK);
     }
-
-    #[Route("/{id}", name: "delete", methods: ["DELETE"])]
-    public function delete(Concert $entity, EntityManagerInterface $entityManager): Response
-    {
-        $entityManager->remove($entity);
-        $entityManager->flush();
-
-        return $this->json(["message" => "Entity deleted successfully"], Response::HTTP_OK);
-    }
 }

@@ -51,4 +51,12 @@ class ArtistController extends AbstractController
     {
         return $this->edit(new Artist(), $request, $entityManager);
     }
+
+    #[Route("/delete/{id}", name: "delete", methods: ["GET"])]
+    public function delete(Artist $entity, EntityManagerInterface $entityManager) : Response {
+        $entityManager->remove($entity);
+        $entityManager->flush();
+
+        return $this->redirectToRoute("artist_admin_index");
+    }
 }

@@ -51,4 +51,12 @@ class StandController extends AbstractController
     {
         return $this->edit(new Stand(), $request, $entityManager);
     }
+
+    #[Route("/delete/{id}", name: "delete", methods: ["GET"])]
+    public function delete(Stand $entity, EntityManagerInterface $entityManager) : Response {
+        $entityManager->remove($entity);
+        $entityManager->flush();
+
+        return $this->redirectToRoute("stand_admin_index");
+    }
 }

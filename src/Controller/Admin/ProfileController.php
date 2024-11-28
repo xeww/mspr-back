@@ -38,6 +38,6 @@ class ProfileController extends AbstractController
             return $this->redirectToRoute("home_admin");
         }
 
-        return $this->render("admin/profile.html.twig", ["form" => $form]);
+        return $this->render("admin/profile/profile.html.twig", ["form" => $form]);
     }
 }

@@ -17,7 +17,7 @@ class StandController extends AbstractController
     #[Route("/", name: "index", methods: ["GET"])]
     public function index(StandRepository $repository): Response
     {
-        return $this->render("admin/list.html.twig", [
+        return $this->render("admin/list/list.html.twig", [
             "entities" => $repository->findAll(),
             "title" => "Liste des stands",
             "identityAttribute" => "name",
@@ -40,7 +40,7 @@ class StandController extends AbstractController
             return $this->redirectToRoute("stand_admin_index");
         }
 
-        return $this->render("admin/edit.html.twig", [
+        return $this->render("admin/list/edit.html.twig", [
             "entity" => $entity,
             "form" => $form
         ]);

@@ -2,6 +2,7 @@
 
 namespace App\Controller\Admin;
 
+use App\Entity\AdminUser;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
@@ -17,6 +18,11 @@ class HomeController extends AbstractController
     #[Route("/admin", name: "home_admin")]
     public function home(): Response
     {
-        return $this->render("admin/home.html.twig");
+        $user = $this->getUser();
+        if (!$user instanceof AdminUser) {
+            throw $this->createAccessDeniedException();
+        }
+
+        return $this->render("admin/home.html.twig", ["isSuperAdmin" => $user->hasRole("ROLE_SUPER_ADMIN")]);
     }
 }

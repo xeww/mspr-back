@@ -3,13 +3,16 @@
     <div class="homepage-container center">
         <h1>Bienvenue, {{ app.user.firstName }}!</h1>
         <nav>
-            <a href="/admin/artist"><span>*/</span> Artistes</a>
-            <a href="/admin/concert"><span>*/</span> Concerts</a>
-            <a href="/admin/scene"><span>*/</span> Scènes</a>
-            <a href="/admin/partner"><span>*/</span> Partenaires</a>
-            <a href="/admin/stand"><span>*/</span> Stands</a>
-            <a href="/admin/wc"><span>*/</span> WC</a>
-            <a href="/admin/profile"><span>*/</span> Profile</a>
+            <a href="{{ path('artist_admin_index') }}"><span>*/</span> Artistes</a>
+            <a href="{{ path('concert_admin_index') }}"><span>*/</span> Concerts</a>
+            <a href="{{ path('scene_admin_index') }}"><span>*/</span> Scènes</a>
+            <a href="{{ path('partner_admin_index') }}"><span>*/</span> Partenaires</a>
+            <a href="{{ path('stand_admin_index') }}"><span>*/</span> Stands</a>
+            <a href="{{ path('wc_admin_index') }}"><span>*/</span> WC</a>
+            <a href="{{ path('profile_admin') }}"><span>*/</span> Profile</a>
+            {% if isSuperAdmin == true %}
+                <a href="{{ path('account_admin_index') }}"><span>*/</span> Comptes</a>
+            {% endif %}
         </nav>
     </div>
 {% endblock %}

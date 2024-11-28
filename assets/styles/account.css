@@ -1,0 +1,22 @@
+.account-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.account-container::after {
+    content: "";
+    height: 1px;
+    width: 100%;
+    background-color: lightgray;
+    position: absolute;
+    bottom: 0;
+}
+
+.account-delete-button {
+    background-color: indianred;
+}
+
+.account-create-button {
+
+}

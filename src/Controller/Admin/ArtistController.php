@@ -17,7 +17,7 @@ class ArtistController extends AbstractController
     #[Route("/", name: "index", methods: ["GET"])]
     public function index(ArtistRepository $repository): Response
     {
-        return $this->render("admin/list.html.twig", [
+        return $this->render("admin/list/list.html.twig", [
             "entities" => $repository->findAll(),
             "title" => "Liste des artistes",
             "identityAttribute" => "name",
@@ -40,7 +40,7 @@ class ArtistController extends AbstractController
             return $this->redirectToRoute("artist_admin_index");
         }
 
-        return $this->render("admin/edit.html.twig", [
+        return $this->render("admin/list/edit.html.twig", [
             "entity" => $entity,
             "form" => $form
         ]);

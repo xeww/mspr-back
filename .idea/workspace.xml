@@ -4,18 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94a4d03f-f5d4-4f21-b89f-91641b40d9fa" name="Changes" comment="feat: run php-cs-fixer">
+    <list default="true" id="94a4d03f-f5d4-4f21-b89f-91641b40d9fa" name="Changes" comment="feat: small fixes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.php-cs-fixer.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.php-cs-fixer.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/Admin/ArtistController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/ArtistController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/Admin/ConcertController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/ConcertController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/Admin/PartnerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/PartnerController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/ProfileController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/Admin/SceneController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/SceneController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/Admin/StandController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/StandController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/Admin/WCController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/WCController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/AdminUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/AdminUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/list/edit.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/admin/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/home.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/list.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/list/list.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/profile.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/profile/profile.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,6 +146,9 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates/admin/profile" />
+      <recent name="$PROJECT_DIR$/templates/admin/list" />
+      <recent name="$PROJECT_DIR$/templates/admin/account" />
       <recent name="$PROJECT_DIR$/config/packages" />
       <recent name="$PROJECT_DIR$/public/images" />
     </key>
@@ -176,7 +185,9 @@
       <workItem from="1732527466645" duration="2515000" />
       <workItem from="1732602797868" duration="47000" />
       <workItem from="1732602849509" duration="21832000" />
-      <workItem from="1732689976459" duration="6362000" />
+      <workItem from="1732689976459" duration="8186000" />
+      <workItem from="1732712652561" duration="9623000" />
+      <workItem from="1732790702090" duration="4575000" />
     </task>
     <task id="LOCAL-00001" summary="feat: added stand &amp; wc api/controller">
       <option name="closed" value="true" />
@@ -210,7 +221,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732690643237</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="feat: small fixes">
+      <option name="closed" value="true" />
+      <created>1732713057727</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1732713057727</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -220,7 +239,8 @@
     <MESSAGE value="feat: added stand &amp; wc api/controller" />
     <MESSAGE value="feat: added security" />
     <MESSAGE value="feat: run php-cs-fixer" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: run php-cs-fixer" />
+    <MESSAGE value="feat: small fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: small fixes" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

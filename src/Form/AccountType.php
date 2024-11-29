@@ -19,7 +19,7 @@ class AccountType extends AbstractType
             ->add("username", TextType::class, ["label" => "Nom d'utilisateur"])
             ->add("firstName", TextType::class, ["label" => "Prénom"])
             ->add("lastName", TextType::class, ["label" => "Nom"])
-            ->add("plainPassword", PasswordType::class, ["mapped" => false, "label" => "Mot de passe"])
+            ->add("plainPassword", PasswordType::class, ["mapped" => false, "label" => "Mot de passe", "required" => false])
             ->add("isSuperAdmin", CheckboxType::class, ["mapped" => false, "required" => false, "label" => "Super Admin"])
             ->add("submit", SubmitType::class, ["label" => "Enregistrer"]);
     }

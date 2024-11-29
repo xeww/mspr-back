@@ -6,22 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="94a4d03f-f5d4-4f21-b89f-91641b40d9fa" name="Changes" comment="feat: small fixes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/ArtistController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/ArtistController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/ConcertController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/ConcertController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/PartnerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/PartnerController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/ProfileController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/SceneController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/SceneController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/StandController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/StandController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/WCController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/WCController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/AdminUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/AdminUser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/list/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/home.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/list.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/list/list.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/profile.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/profile/profile.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/AccountController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/AccountController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/AccountType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/AccountType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/account/account_create.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/account/account_edit.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,7 +174,8 @@
       <workItem from="1732602849509" duration="21832000" />
       <workItem from="1732689976459" duration="8186000" />
       <workItem from="1732712652561" duration="9623000" />
-      <workItem from="1732790702090" duration="4575000" />
+      <workItem from="1732790702090" duration="6782000" />
+      <workItem from="1732867332095" duration="6735000" />
     </task>
     <task id="LOCAL-00001" summary="feat: added stand &amp; wc api/controller">
       <option name="closed" value="true" />

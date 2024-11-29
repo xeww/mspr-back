@@ -20,7 +20,7 @@ class AccountController extends AbstractController
     }
 
     #[Route("/admin/account/edit/{id}", name: "account_admin_edit")]
-    public function edit(AdminUser $user, Request $request, EntityManagerInterface $entityManager, UserPasswordHasherInterface $hasher) : Response {
+    public function edit(AdminUser $user, Request $request, EntityManagerInterface $entityManager, UserPasswordHasherInterface $hasher, $creating = false) : Response {
         $form = $this->createForm(AccountType::class, $user);
         $form->handleRequest($request);
 
@@ -30,8 +30,15 @@ class AccountController extends AbstractController
                 $plainPassword = $form->get("plainPassword")->getData();
                 $isSuperAdmin = $form->get("isSuperAdmin")->getData();
 
-                $user->setPassword($hasher->hashPassword($user, $plainPassword));
-                if($isSuperAdmin) $user->setRoles(["ROLE_SUPER_ADMIN"]);
+                if($plainPassword === null) {
+                    if($creating) {
+                        return $this->redirectToRoute("account_admin_index");
+                    }
+                }else{
+                    $user->setPassword($hasher->hashPassword($user, $plainPassword));
+                }
+
+                $isSuperAdmin ? $user->setRoles(["ROLE_SUPER_ADMIN"]) : $user->setRoles([]);
 
                 $entityManager->persist($user);
                 $entityManager->flush();
@@ -40,12 +47,12 @@ class AccountController extends AbstractController
             }
         }
 
-        return $this->render("admin/account/account_create.html.twig", ["form" => $form]);
+        return $this->render("admin/account/account_edit.html.twig", ["form" => $form, "creating" => $creating]);
     }
 
     #[Route("/admin/account/create", name: "account_admin_create")]
     public function create(Request $request, EntityManagerInterface $entityManager, UserPasswordHasherInterface $hasher) : Response {
-        return $this->edit(new AdminUser(), $request, $entityManager, $hasher);
+        return $this->edit(new AdminUser(), $request, $entityManager, $hasher, true);
     }
 
     #[Route("/admin/account/delete/{id}", name: "account_admin_delete")]

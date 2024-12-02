@@ -4,7 +4,7 @@
     <div class="contact-messages-container">
         {% for message in messages %}
             <div id="{{ message.id }}" class="contact-message">
-                <div>
+                <div class="contact-message-info">
                     <p class="font-title">De: {{ message.senderFullName }} <span class="font-body">({{ message.senderEmail }})</span></p>
                     <p class="font-body">Message: {{ message.message }}</p>
                     <i class="font-body">{{ message.sentOn|date('Y-m-d à H:i') }}</i>

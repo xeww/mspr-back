@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="94a4d03f-f5d4-4f21-b89f-91641b40d9fa" name="Changes" comment="feat: small fixes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/home.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/contact.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/contact.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/API/ContactController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/API/ContactController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/contact/contact_messages.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/contact/contact_messages.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,7 +180,7 @@
       <workItem from="1732867332095" duration="18541000" />
       <workItem from="1733138009388" duration="532000" />
       <workItem from="1733138548086" duration="161000" />
-      <workItem from="1733138715090" duration="21361000" />
+      <workItem from="1733138715090" duration="24327000" />
     </task>
     <task id="LOCAL-00001" summary="feat: added stand &amp; wc api/controller">
       <option name="closed" value="true" />

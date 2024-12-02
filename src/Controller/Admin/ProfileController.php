@@ -30,25 +30,25 @@ class ProfileController extends AbstractController
             $user = $form->getData();
             $newPassword = $form->get("newPassword")->getData();
 
-            if(!$user instanceof AdminUser) {
+            if (!$user instanceof AdminUser) {
                 $this->addFlash("error", "Utilisateur mal-formé.");
                 return $this->redirectToRoute("profile_admin");
             }
 
-            if(is_string($newPassword)) {
+            if (is_string($newPassword)) {
                 $passwordCheck = PasswordUtils::isPasswordValid($newPassword);
-                if($passwordCheck["valid"] === false) {
+                if ($passwordCheck["valid"] === false) {
                     $this->addFlash("error", $passwordCheck["message"]);
                     return $this->redirectToRoute("profile_admin");
                 }
             }
 
-            if(count($repository->findBy(["username" => $user->getUsername()])) !== 0 && $user->getUsername() !== $oldUser->getUsername()) {
+            if (count($repository->findBy(["username" => $user->getUsername()])) !== 0 && $user->getUsername() !== $oldUser->getUsername()) {
                 $this->addFlash("error", "Ce nom d'utilisateur est déjà utilisé.");
                 return $this->redirectToRoute("profile_admin");
             }
 
-            if($newPassword !== null) {
+            if ($newPassword !== null) {
                 $user->setPassword($hasher->hashPassword($user, $newPassword));
             }
 

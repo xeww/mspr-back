@@ -56,18 +56,18 @@ class SecurityController extends AbstractController
             $firstName = $request->request->get("_first-name");
             $lastName = $request->request->get("_last-name");
 
-            if(empty($username) || empty($password) || empty($firstName) || empty($lastName)) {
+            if (empty($username) || empty($password) || empty($firstName) || empty($lastName)) {
                 $this->addFlash("error", "Merci de remplir tous les champs.");
                 return $this->redirectToRoute("security_register");
             }
 
-            if(count($repository->findBy(["username" => $username])) !== 0) {
+            if (count($repository->findBy(["username" => $username])) !== 0) {
                 $this->addFlash("error", "Ce nom d'utilisateur est déjà utilisé.");
                 return $this->redirectToRoute("security_register");
             }
 
             $passwordCheck = PasswordUtils::isPasswordValid($password);
-            if($passwordCheck["valid"] === false) {
+            if ($passwordCheck["valid"] === false) {
                 $this->addFlash("error", $passwordCheck["message"]);
                 return $this->redirectToRoute("security_register");
             }

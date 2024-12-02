@@ -13,7 +13,7 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class AccountType extends AbstractType
 {
-    public function buildForm(FormBuilderInterface $builder, array $options) : void
+    public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
             ->add("username", TextType::class, ["label" => "Nom d'utilisateur"])
@@ -24,7 +24,7 @@ class AccountType extends AbstractType
             ->add("submit", SubmitType::class, ["label" => "Enregistrer"]);
     }
 
-    public function configureOptions(OptionsResolver $resolver) : void
+    public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
             "data_class" => AdminUser::class,

@@ -1,0 +1,21 @@
+.contact-messages-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.contact-message {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    color: white;
+    background-color: var(--lesser-dark);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.message-delete-button {
+    background-color: var(--red);
+}

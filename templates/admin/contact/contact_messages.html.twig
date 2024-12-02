@@ -1,0 +1,16 @@
+{% extends "base.html.twig" %}
+{% block headerTitle %}Messages{% endblock %}
+{% block body %}
+    <div class="contact-messages-container">
+        {% for message in messages %}
+            <div id="{{ message.id }}" class="contact-message">
+                <div>
+                    <p class="font-title">De: {{ message.senderFullName }} <span class="font-body">({{ message.senderEmail }})</span></p>
+                    <p class="font-body">Message: {{ message.message }}</p>
+                    <i class="font-body">{{ message.sentOn|date('Y-m-d à H:i') }}</i>
+                </div>
+                <div class="button message-delete-button font-title" data-url="{{ path("contact_admin_delete", {"id": message.id}) }}">Supprimer</div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

@@ -1,10 +1,9 @@
 {% extends "base.html.twig" %}
-
+{% block headerTitle %}Comptes{% endblock %}
 {% block body %}
-    <div id="accounts-container" class="center">
-        <h1>Comptes</h1>
+    <div id="accounts-container">
         {% for account in accounts %}
-            <div id="{{ account.id }}" class="account-container">
+            <div id="{{ account.id }}" class="account-container font-title">
                 <div>
                     <p>{% if account.hasRole("ROLE_SUPER_ADMIN") == true %}⭐{% endif %} {{ account.lastName }} {{ account.firstName }} ({{ account.username }})</p>
                 </div>
@@ -14,6 +13,6 @@
                 </div>
             </div>
         {% endfor %}
-        <div class="button" id="account-create-button" data-url="{{ path("account_admin_create") }}">Créer un compte</div>
+        <div class="button font-title" id="account-create-button" data-url="{{ path("account_admin_create") }}">Créer un compte</div>
     </div>
 {% endblock %}

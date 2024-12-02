@@ -17,12 +17,11 @@ class WCController extends AbstractController
     #[Route("/", name: "index", methods: ["GET"])]
     public function index(WCRepository $repository): Response
     {
-        return $this->render("admin/list/list.html.twig", [
+        return $this->render("admin/list/list_index.html.twig", [
             "entities" => $repository->findAll(),
             "title" => "Liste des WC",
             "identityAttribute" => "id",
             "adminUrl" => $this->generateUrl("wc_admin_index"),
-            "apiUrl" => $this->generateUrl("wc_api_index")
         ]);
     }
 
@@ -40,7 +39,7 @@ class WCController extends AbstractController
             return $this->redirectToRoute("wc_admin_index");
         }
 
-        return $this->render("admin/list/edit.html.twig", [
+        return $this->render("admin/list/list_edit.html.twig", [
             "entity" => $entity,
             "form" => $form
         ]);

@@ -1,10 +1,9 @@
 export default function handleList() {
-    const listContainer = document.getElementById("list-container");
+    const listContainer = document.querySelector(".list-container");
 
     if(listContainer) {
-        const adminUrl = listContainer.getAttribute("data-admin-url");
+        const adminUrl = listContainer.getAttribute("data-url");
 
-        /* Edit button */
         document.querySelectorAll(".entity-edit-button")
             .forEach(button => {
                 button.addEventListener("click", () => {
@@ -15,7 +14,6 @@ export default function handleList() {
                 });
             });
 
-        /* Delete button */
         document.querySelectorAll(".entity-delete-button")
             .forEach(button => {
                 button.addEventListener("click", () => {
@@ -28,9 +26,11 @@ export default function handleList() {
                 });
             });
 
-        /* Create button */
-        document.getElementById("create-button").addEventListener("click", () => {
-            window.location.href = `${adminUrl}create`;
-        });
+        const entityCreateButton = document.querySelector(".entity-create-button");
+        if(entityCreateButton) {
+            entityCreateButton.addEventListener("click", () => {
+                window.location.href = `${adminUrl}create`;
+            });
+        }
     }
 }

@@ -1,27 +1,110 @@
-body {
-    background-color: white;
+@import url('https://fonts.googleapis.com/css2?family=Days+One&family=Itim&family=Rubik+Glitch&display=swap');
+
+:root {
+    --dark: #0E0A17;
+    --lesser-dark: #26232C;
+    --orange: #DD914F;
+    --orange-dark: #AA6D38;
+    --brown: #453236;
+    --red: #FE4A49;
 }
 
 * {
     margin: 0;
     padding: 0;
-}
-
-a {
     text-decoration: none;
 }
 
-.center {
-    width: 50%;
-    margin: auto;
+body {
+    background-color: var(--dark);
 }
 
-.button {
+.font-title {
+    font-family: Days One, serif;
+}
+
+.font-body {
+    font-family: Itim, serif;
+}
+
+header {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--dark);
+    border-bottom: 1px solid white;
+    padding: 10px;
+    margin-bottom: 50px;
+}
+
+header a {
+    padding: 10px;
+    border-radius: 10px;
+    transition: background-color 200ms;
+}
+
+header a:hover {
+    background-color: rgba(217, 217, 217, 0.1);
+}
+
+header h1, header h2 {
+    color: white;
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--lesser-dark);
+    padding: 15px;
+    font-size: 1.2rem;
+    margin-top: 100px;
+}
+
+footer p {
+    color: white;
+}
+
+footer span {
+    color: var(--orange);
+}
+
+footer a {
+    color: var(--red);
+}
+
+.button, button[type="submit"] {
+    background-color: gray;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px;
+    text-align: center;
+}
+
+.button:hover {
+    opacity: 0.9;
+}
+
+input, textarea, select {
     border-radius: 10px;
     padding: 10px;
+    background-color: var(--lesser-dark);
+    border: 2px solid white;
     color: white;
-    cursor: pointer;
-    background-color: orange;
+    font-family: Itim, serif;
+    font-size: 1.2rem;
+}
+
+input:focus, textarea:focus, select:focus {
+    border: 2px solid var(--orange);
+    outline: none;
+}
+
+button[type="submit"] {
+    border: none;
+    background-color: forestgreen;
+    color: white;
+    font-family: Days One, serif;
+    font-size: 1.1rem;
 }

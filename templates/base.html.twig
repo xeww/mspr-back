@@ -1,13 +1,26 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Nation Sounds - Back Office{% endblock %}</title>
-        {% block javascripts %}
-            {% block importmap %}{{ importmap('app') }}{% endblock %}
-        {% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-    </body>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Nation Sounds - Back Office</title>
+    {% block javascripts %}
+        {% block importmap %}{{ importmap('app') }}{% endblock %}
+    {% endblock %}
+</head>
+<body>
+<header>
+    <a href="{{ path("home_admin") }}">
+        <h1 class="font-title">Nation Sounds</h1>
+        <h2 class="font-title">Back Office » {% block headerTitle %}{% endblock %}</h2>
+    </a>
+</header>
+{% block body %}
+{% endblock %}
+<footer>
+    {% if app.user %}
+        <p class="font-body">Connecté en tant que <span>{{ app.user.username }}</span></p>
+        <a href="{{ path("security_logout") }}" class="font-body">Se déconnecter</a>
+    {% endif %}
+</footer>
+</body>
 </html>

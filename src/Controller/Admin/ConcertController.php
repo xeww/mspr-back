@@ -17,12 +17,11 @@ class ConcertController extends AbstractController
     #[Route("/", name: "index", methods: ["GET"])]
     public function index(ConcertRepository $repository): Response
     {
-        return $this->render("admin/list/list.html.twig", [
+        return $this->render("admin/list/list_index.html.twig", [
             "entities" => $repository->findAll(),
             "title" => "Liste des concerts",
             "identityAttribute" => "id",
             "adminUrl" => $this->generateUrl("concert_admin_index"),
-            "apiUrl" => $this->generateUrl("concert_api_index")
         ]);
     }
 
@@ -40,7 +39,7 @@ class ConcertController extends AbstractController
             return $this->redirectToRoute("concert_admin_index");
         }
 
-        return $this->render("admin/list/edit.html.twig", [
+        return $this->render("admin/list/list_edit.html.twig", [
             "entity" => $entity,
             "form" => $form
         ]);

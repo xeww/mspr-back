@@ -1,0 +1,13 @@
+.profile-container {
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.profile-container form div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

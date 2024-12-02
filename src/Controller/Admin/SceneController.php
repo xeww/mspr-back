@@ -17,12 +17,11 @@ class SceneController extends AbstractController
     #[Route("/", name: "index", methods: ["GET"])]
     public function index(SceneRepository $repository): Response
     {
-        return $this->render("admin/list/list.html.twig", [
+        return $this->render("admin/list/list_index.html.twig", [
             "entities" => $repository->findAll(),
             "title" => "Liste des scènes",
             "identityAttribute" => "name",
             "adminUrl" => $this->generateUrl("scene_admin_index"),
-            "apiUrl" => $this->generateUrl("scene_api_index")
         ]);
     }
 
@@ -40,7 +39,7 @@ class SceneController extends AbstractController
             return $this->redirectToRoute("scene_admin_index");
         }
 
-        return $this->render("admin/list/edit.html.twig", [
+        return $this->render("admin/list/list_edit.html.twig", [
             "entity" => $entity,
             "form" => $form
         ]);

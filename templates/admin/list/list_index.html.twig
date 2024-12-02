@@ -1,0 +1,18 @@
+{% extends "base.html.twig" %}
+{% block headerTitle %}{{ title }}{% endblock %}
+{% block body %}
+        <div class="list-container" data-url="{{ adminUrl }}">
+            <div class="list-container-entities">
+                {% for entity in entities %}
+                    <div id="{{ entity.id }}" class="entity-container">
+                        <p class="font-title">{{ attribute(entity, identityAttribute) }}</p>
+                        <div data-id="{{ entity.id }}">
+                            <div class="entity-edit-button button font-title">Modifier</div>
+                            <div class="entity-delete-button button font-title">Supprimer</div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="entity-create-button button font-title">Créer/Ajouter</div>
+        </div>
+{% endblock %}

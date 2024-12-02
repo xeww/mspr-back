@@ -1,22 +1,46 @@
-.account-container {
+#accounts-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 15px;
 }
 
-.account-container::after {
-    content: "";
-    height: 1px;
-    width: 100%;
-    background-color: lightgray;
-    position: absolute;
-    bottom: 0;
+.account-container {
+    background-color: var(--lesser-dark);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.account-container p {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.account-edit-button {
+    color: white;
+    background-color: darkorange;
 }
 
 .account-delete-button {
-    background-color: indianred;
+    color: white;
+    background-color: var(--red);
 }
 
-.account-create-button {
+#account-create-button {
+    color: white;
+    background-color: forestgreen;
+}
 
+.account-edit-form {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.account-edit-form form div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }

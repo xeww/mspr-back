@@ -1,38 +1,66 @@
+.list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.list-container p {
+    color: white;
+}
+
+.list-container-entities {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
 .entity-container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    position: relative;
+    justify-content: space-between;
+    background-color: var(--lesser-dark);
+    padding: 10px;
+    border-radius: 10px;
+    gap: 20px;
+    max-width: 250px;
 }
 
-.entity-container::after {
-    content: "";
-    height: 1px;
-    width: 100%;
-    background-color: lightgray;
-    position: absolute;
-    bottom: 0;
-}
-
-.list-buttons {
-    display: flex;
-    gap: 10px;
+.entity-edit-button {
+    background-color: darkorange;
+    color: white;
+    margin-bottom: 10px;
 }
 
 .entity-delete-button {
-    background-color: indianred;
+    background-color: var(--red);
+    color: white;
 }
 
-.entity-edit-button  {
-    background-color: limegreen;
+.entity-create-button {
+    margin-top: 20px;
+    background-color: forestgreen;
+    color: white;
 }
 
-img {
+.list-edit-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-edit-container label, a {
+    color: white;
+}
+
+.list-edit-container img {
     width: 300px;
 }
 
-#create-button {
-    margin-top: 15px;
+.list-edit-container form div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }

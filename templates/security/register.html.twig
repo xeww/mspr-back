@@ -1,10 +1,26 @@
 {% extends "base.html.twig" %}
 {% block headerTitle %}S'enregistrer{% endblock %}
 {% block body %}
+
+    {% for label, messages in app.flashes %}
+        {% for message in messages %}
+            <div class="alert alert-{{ label }} font-title">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endfor %}
+
     <form method="post" class="register-form font-title">
         <h1>Première connexion?</h1>
         <label for="username">Nom d'utilisateur</label>
         <input type="text" value="" name="_username" id="username" required autofocus>
+
+        <label for="first-name">Prénom</label>
+        <input type="text" name="_first-name" id="first-name" required>
+
+        <label for="last-name">Nom</label>
+        <input type="text" name="_last-name" id="last-name" required>
+
         <label for="password">Mot de passe</label>
         <input type="password" name="_password" id="password" required>
 

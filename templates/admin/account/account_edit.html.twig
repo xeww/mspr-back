@@ -1,6 +1,14 @@
 {% extends "base.html.twig" %}
 {% block headerTitle %}Modifier un compte{% endblock %}
 {% block body %}
+    {% for label, messages in app.flashes %}
+        {% for message in messages %}
+            <div class="alert alert-{{ label }} font-title">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endfor %}
+
     <div class="account-edit-form font-title">
         {{ form(form) }}
     </div>

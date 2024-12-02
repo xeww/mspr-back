@@ -108,3 +108,12 @@ button[type="submit"] {
     font-family: Days One, serif;
     font-size: 1.1rem;
 }
+
+.alert {
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    background-color: rgba(205, 92, 92, 0.55);
+    border: 2px solid indianred;
+    border-radius: 10px;
+}

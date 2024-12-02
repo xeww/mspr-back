@@ -1,6 +1,14 @@
 {% extends "base.html.twig" %}
 {% block headerTitle %}Profil{% endblock %}
 {% block body %}
+    {% for label, messages in app.flashes %}
+        {% for message in messages %}
+            <div class="alert alert-{{ label }} font-title">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endfor %}
+
     <div class="profile-container font-title">
         {{ form(form) }}
     </div>

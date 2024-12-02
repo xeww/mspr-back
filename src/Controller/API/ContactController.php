@@ -13,7 +13,7 @@ use Symfony\Component\Routing\Attribute\Route;
 class ContactController extends AbstractController
 {
     #[Route("/api/contact", name: "contact", methods: ["POST"])]
-    public function send(Request $request, EntityManagerInterface $entityManager, RateLimiterFactory $contactApiLimiter) : Response
+    public function send(Request $request, EntityManagerInterface $entityManager, RateLimiterFactory $contactApiLimiter): Response
     {
         $limiter = $contactApiLimiter->create($request->getClientIp());
 
@@ -27,15 +27,15 @@ class ContactController extends AbstractController
         $email = $content["email"] ?? null;
         $message = $content["message"] ?? null;
 
-        if($fullName === null || strlen($fullName) >= 255) {
+        if ($fullName === null || strlen($fullName) >= 255) {
             return $this->json(["error" => "Le nom/prénom est trop long ou est n'est pas renseigné."], Response::HTTP_BAD_REQUEST);
         }
 
-        if($email === null || strlen($email) >= 255) {
+        if ($email === null || strlen($email) >= 255) {
             return $this->json(["error" => "L'email est trop longue ou est n'est pas renseignée."], Response::HTTP_BAD_REQUEST);
         }
 
-        if($message === null || strlen($message) >= 2000) {
+        if ($message === null || strlen($message) >= 2000) {
             return $this->json(["error" => "Le message est trop long ou n'est pas renseigné."], Response::HTTP_BAD_REQUEST);
         }
 

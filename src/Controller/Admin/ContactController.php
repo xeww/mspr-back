@@ -12,7 +12,8 @@ use Symfony\Component\Routing\Attribute\Route;
 class ContactController extends AbstractController
 {
     #[Route("/admin/contact", name: "contact_admin_index", methods: ['GET'])]
-    public function index(ContactRepository $repository) : Response {
+    public function index(ContactRepository $repository): Response
+    {
         return $this->render("admin/contact/contact_messages.html.twig", ["messages" => $repository->findAll()]);
     }
 

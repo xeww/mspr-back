@@ -5,16 +5,16 @@
         <h3 class="font-title">Bienvenue, {{ app.user.firstName }}!</h3>
         <nav>
             <a href="{{ path('artist_admin_index') }}" class="font-title">Artistes<p class="font-body">Gérer les artistes</p></a>
-            <a href="{{ path('concert_admin_index') }}" class="font-title">Concerts<p class="font-body">Gérer les concerts</p></a>
-            <a href="{{ path('scene_admin_index') }}" class="font-title">Scènes<p class="font-body">Gérer les scènes</p></a>
-            <a href="{{ path('partner_admin_index') }}" class="font-title">Partenaires<p class="font-body">Gérer les partenaires</p></a>
-            <a href="{{ path('stand_admin_index') }}" class="font-title">Stands<p class="font-body">Gérer les stands</p></a>
-            <a href="{{ path('wc_admin_index') }}" class="font-title">WC<p class="font-body">Gérer les WC</p></a>
-            <a href="{{ path('contact_admin_index') }}" class="font-title">Contact<p class="font-body">Voir les messages du formulaire</p></a>
-            <a href="{{ path('profile_admin') }}" class="font-title">Profil<p class="font-body">Gérer votre profil</p></a>
             {% if isSuperAdmin == true %}
                 <a href="{{ path('account_admin_index') }}" class="font-title">Comptes<p class="font-body">Gérer les comptes back-office (SA)</p></a>
             {% endif %}
+            <a href="{{ path('concert_admin_index') }}" class="font-title">Concerts<p class="font-body">Gérer les concerts</p></a>
+            <a href="{{ path('contact_admin_index') }}" class="font-title">Contact<p class="font-body">Voir les messages du formulaire</p></a>
+            <a href="{{ path('partner_admin_index') }}" class="font-title">Partenaires<p class="font-body">Gérer les partenaires</p></a>
+            <a href="{{ path('profile_admin') }}" class="font-title">Profil<p class="font-body">Gérer votre profil</p></a>
+            <a href="{{ path('scene_admin_index') }}" class="font-title">Scènes<p class="font-body">Gérer les scènes</p></a>
+            <a href="{{ path('stand_admin_index') }}" class="font-title">Stands<p class="font-body">Gérer les stands</p></a>
+            <a href="{{ path('wc_admin_index') }}" class="font-title">WC<p class="font-body">Gérer les WC</p></a>
         </nav>
     </div>
 {% endblock %}

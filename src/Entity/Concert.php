@@ -25,6 +25,9 @@ class Concert
     #[ORM\Column(type: Types::DATETIME_MUTABLE)]
     private ?\DateTimeInterface $dateAndTime = null;
 
+    #[ORM\Column(type: Types::TEXT)]
+    private ?string $reference = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -62,6 +65,18 @@ class Concert
     public function setDateAndTime(\DateTimeInterface $dateAndTime): static
     {
         $this->dateAndTime = $dateAndTime;
+
+        return $this;
+    }
+
+    public function getReference(): ?string
+    {
+        return $this->reference;
+    }
+
+    public function setReference(string $reference): static
+    {
+        $this->reference = $reference;
 
         return $this;
     }

@@ -33,6 +33,11 @@ class ConcertController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $entity = $form->getData();
+            if(!$entity instanceof Concert){
+                throw $this->createNotFoundException("La concert n'existe pas.");
+            }
+
+            $entity->setReference("{$entity->getArtist()->getName()} à {$entity->getDateAndTime()->format('d/m/Y \à H:i')}");
             $entityManager->persist($entity);
             $entityManager->flush();
 

@@ -6,12 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="94a4d03f-f5d4-4f21-b89f-91641b40d9fa" name="Changes" comment="feat: small fixes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/API/ConcertController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/API/ConcertController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/AdminUserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/AdminUserRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Repository/ConcertRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ConcertRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/ContactRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ContactRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/StandRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/StandRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/WCRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/WCRepository.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,7 +181,8 @@
       <workItem from="1733138715090" duration="24541000" />
       <workItem from="1733213754300" duration="2339000" />
       <workItem from="1733222073704" duration="2599000" />
-      <workItem from="1733229174098" duration="700000" />
+      <workItem from="1733229174098" duration="725000" />
+      <workItem from="1733230428578" duration="22000" />
     </task>
     <task id="LOCAL-00001" summary="feat: added stand &amp; wc api/controller">
       <option name="closed" value="true" />

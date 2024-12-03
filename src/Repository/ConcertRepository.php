@@ -19,7 +19,7 @@ class ConcertRepository extends ServiceEntityRepository
     public function getAllOrderedByDate(): array
     {
         return $this->createQueryBuilder('c')
-            ->orderBy('c.dateAndTime', 'DESC')
+            ->orderBy('c.dateAndTime', 'ASC')
             ->getQuery()
             ->getResult();
     }

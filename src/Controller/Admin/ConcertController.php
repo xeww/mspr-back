@@ -37,7 +37,7 @@ class ConcertController extends AbstractController
                 throw $this->createNotFoundException("La concert n'existe pas.");
             }
 
-            $entity->setReference("{$entity->getArtist()->getName()} à {$entity->getDateAndTime()->format('d/m/Y \à H:i')}");
+            $entity->setReference("{$entity->getArtist()->getName()} le {$entity->getDateAndTime()->format('d/m/Y \à H:i')}");
             $entityManager->persist($entity);
             $entityManager->flush();
 

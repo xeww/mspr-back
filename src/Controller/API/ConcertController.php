@@ -15,7 +15,7 @@ class ConcertController extends AbstractController
     #[Route("/", name: "index", methods: ["GET"])]
     public function index(ConcertRepository $repository): Response
     {
-        return $this->json($repository->findAll(), Response::HTTP_OK);
+        return $this->json($repository->getAllOrderedByDate(), Response::HTTP_OK);
     }
 
     #[Route("/{id}", name: "get", methods: ["GET"])]

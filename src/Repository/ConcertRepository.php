@@ -15,4 +15,12 @@ class ConcertRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, Concert::class);
     }
+
+    public function getAllOrderedByDate(): array
+    {
+        return $this->createQueryBuilder('c')
+            ->orderBy('c.dateAndTime', 'DESC')
+            ->getQuery()
+            ->getResult();
+    }
 }

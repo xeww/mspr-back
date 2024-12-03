@@ -20,7 +20,7 @@ class ConcertController extends AbstractController
         return $this->render("admin/list/list_index.html.twig", [
             "entities" => $repository->findAll(),
             "title" => "Liste des concerts",
-            "identityAttribute" => "id",
+            "identityAttribute" => "reference",
             "adminUrl" => $this->generateUrl("concert_admin_index"),
         ]);
     }

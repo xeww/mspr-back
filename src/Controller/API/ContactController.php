@@ -21,15 +21,15 @@ class ContactController extends AbstractController
         $email = $content["email"] ?? null;
         $message = $content["message"] ?? null;
 
-        if ($fullName === null || strlen($fullName) >= 255) {
+        if ($fullName === null || strlen($fullName) >= 255 || !preg_match('/[a-zA-Z]/', $fullName)) {
             return $this->json(["error" => "Le nom/prénom est trop long ou n'est pas renseigné."], Response::HTTP_BAD_REQUEST);
         }
 
-        if ($email === null || strlen($email) >= 255) {
+        if ($email === null || strlen($email) >= 255 || !preg_match('/[a-zA-Z]/', $email)) {
             return $this->json(["error" => "L'email est trop longue ou n'est pas renseignée."], Response::HTTP_BAD_REQUEST);
         }
 
-        if ($message === null || strlen($message) >= 2000) {
+        if ($message === null || strlen($message) >= 2000 || !preg_match('/[a-zA-Z]/', $message)) {
             return $this->json(["error" => "Le message est trop long ou n'est pas renseigné."], Response::HTTP_BAD_REQUEST);
         }
 

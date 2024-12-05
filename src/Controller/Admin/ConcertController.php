@@ -33,7 +33,7 @@ class ConcertController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $entity = $form->getData();
-            if(!$entity instanceof Concert){
+            if (!$entity instanceof Concert) {
                 throw $this->createNotFoundException("La concert n'existe pas.");
             }
 
